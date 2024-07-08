@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Bag</title>
+    <link rel="stylesheet" href="css/bag.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="images/2-removebg-preview.png" alt="Shop Logo">
+        </a>
+        <ul class="nav">
+            <li><a href="index.html"><ion-icon name="home-outline"></ion-icon></a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="shop.html">shopping</a></li>
+            <li><a href="#">contact us</a></li>
+        </ul>
+        <ul class="util">
+            <li><a href="#" id="login-link"><ion-icon name="person-outline"></ion-icon></a></li>
+            <li><a href="#" id="wishlist-icon"><ion-icon name="heart-outline"></ion-icon></a></li>
+            <li><a href="bag.html" class="bag-icon"><ion-icon name="bag-outline"></ion-icon> <span class="number" id="cart-number">0</span></a></li>
+        </ul>
+    </header>
+    
+    <main>
+        <h1>Shopping Bag <span id="item-count">(0)</span></h1>
+        <div id="bag-container">
+            <!-- Items will be dynamically added here -->
+        </div>
+        <div class="summary">
+            <p>Subtotal: $<span id="subtotal">0.00</span></p>
+            <label for="promo-code">Promo Code:</label>
+            <input type="text" id="promo-code">
+            <button id="apply-promo">Apply</button>
+            <p>Estimated Shipping: $<span id="shipping">0.00</span></p>
+            <p>Total: $<span id="total">0.00</span></p>
+            <button id="continue-shopping">Continue Shopping</button>
+            <button id="checkout">Proceed to Checkout</button>
+        </div>
+        <div class="footer">
+            <div class="security-badges">Security Badges</div>
+            <div class="payment-methods">Accepted Payment Methods</div>
+            <div class="customer-support">Customer Support</div>
+        </div>
+    </main>
+
+    <script src="js/bag.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

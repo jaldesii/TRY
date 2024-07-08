@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="images/2-removebg-preview.png" alt="Shop Logo">
+        </a>
+        <ul class="nav">
+            <li><a href="index.html"><ion-icon name="home-outline"></ion-icon></a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="shop.html">shopping</a></li>
+            <li><a href="#">contact us</a></li>
+        </ul>
+        <ul class="util">
+            <li><a href="#" id="login-link"><ion-icon name="person-outline"></ion-icon></a></li>
+            <li><a href="#" id="wishlist-icon"><ion-icon name="heart-outline"></ion-icon></a></li>
+            <li><a href="bag.html" class="bag-icon"><ion-icon name="bag-outline"></ion-icon> <span class="number" id="cart-number">0</span></a></li>
+        </ul>
+    </header>
+    <!-- hero banner section -->
+    <div id="banner" class="banner">
+        <!-- left part -->
+        <div class="women">
+            <img src="images/women-1.jpg" alt="">
+            <a href="#" class="switch-btn" onclick="switchBanner('left');">WOMEN</a>
+            <div class="content">
+                <h1>Ladies Fashion</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem mollitia dolor unde sed enim dolores asperiores eum?</p>
+                <a href="women.html">Shop around<ion-icon name="cart-outline"></ion-icon></a>
+            </div>
+        </div>
+        <!-- middle -->
+        <div class="men">
+            <img src="images/men-1.jpg" alt="">
+            <a href="#" class="switch-btn" onclick="switchBanner('middle');">MEN</a>
+            <div class="content">
+                <h1>Men with Taste</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem mollitia dolor unde sed enim dolores asperiores eum?</p>
+                <a href="men.html">Shop around<ion-icon name="cart-outline"></ion-icon></a>
+            </div>
+        </div>
+        <!-- right -->
+        <div class="special">
+            <img src="images/special-2.jpg" alt="">
+            <a href="#" class="switch-btn" onclick="switchBanner('right');">SPECIAL</a>
+            <div class="content">
+                <h1>Be a cool girl</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem mollitia dolor unde sed enim dolores asperiores eum?</p>
+                <a href="special.html">Shop around<ion-icon name="cart-outline"></ion-icon></a>
+            </div>
+        </div>
+        <a href="#" class="reset" onclick="resetBanner();"><ion-icon name="power-outline"></ion-icon></a>
+    </div>
+    <!-- Search and Filter Section -->
+<div class="search-filter">
+    <input type="text" id="search-input" placeholder="Search products...">
+    <select id="filter-select">
+        <option value="all">All</option>
+        <option value="low">Low</option>
+        <option value="high">High</option>
+    </select>
+</div>
+
+<!-- Product Container -->
+<div class="product-container" id="product-container">
+    <div class="product" data-category="category1" data-price="140" data-description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa accusantium, aspernatur provident beatae corporis veniam atque facilis, consequuntur assumenda, vitae dignissimos iste exercitationem dolor eveniet alias eos ullam nesciunt voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore accusamus natus dolorum. Quaerat nulla quod doloremque, officia quis provident amet adipisci unde esse iure delectus, maxime inventore optio fuga nisi?" data-image="images/lalaki1.jpg">
+        <a href="#" onclick="viewProduct(this)">
+            <img src="images/lalaki1.jpg" alt="lalaki1">
+            <h2>Cruise Sweatshirt</h2>
+            <p>$140</p>
+        </a>
+    </div>
+    <div class="product" data-category="category2" data-price="150" data-description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa accusantium, aspernatur provident beatae corporis veniam atque facilis, consequuntur assumenda, vitae dignissimos iste exercitationem dolor eveniet alias eos ullam nesciunt voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore accusamus natus dolorum. Quaerat nulla quod doloremque, officia quis provident amet adipisci unde esse iure delectus, maxime inventore optio fuga nisi?" data-image="images/special-1.jpg">
+        <a href="#" onclick="viewProduct(this)">
+            <img src="images/special-1.jpg" alt="special-1">
+            <h2>Bride XP20</h2>
+            <p>$150</p>
+        </a>
+    </div>
+    <div class="product" data-category="category2" data-price="150" data-description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa accusantium, aspernatur provident beatae corporis veniam atque facilis, consequuntur assumenda, vitae dignissimos iste exercitationem dolor eveniet alias eos ullam nesciunt voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore accusamus natus dolorum. Quaerat nulla quod doloremque, officia quis provident amet adipisci unde esse iure delectus, maxime inventore optio fuga nisi?" data-image="images/special-1.jpg">
+        <a href="#" onclick="viewProduct(this)">
+            <img src="images/special-1.jpg" alt="special-1">
+            <h2>Bride XP20</h2>
+            <p>$150</p>
+        </a>
+    </div>
+    <!-- Additional products... -->
+</div>
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <img src="images/he.png" alt="Logo" class="footer-logo">
+            <h2>Company Name</h2>
+            <p>Tagline</p>
+        </div>
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Contact Information</h3>
+            <p>Address: 1234 Street, City, State</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: info@example.com</p>
+        </div>
+        <div class="footer-column">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p><a href="#">Sitemap</a> | <a href="#">Privacy Policy</a> | <a href="#">Newsletter Subscription</a> | <a href="#">Terms of Service</a></p>
+    </div>
+</footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script src="js/isotope.js"></script>
+    <script src="js/bag.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
